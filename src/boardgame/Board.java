@@ -36,6 +36,11 @@ public class Board {
 		return pieces[position.getRow()][position.getColumn()];
 	}
 	
+	public void placePiece(Piece piece, Position position) {
+		pieces[position.getRow()][position.getColumn()] = piece;
+		//Por estar no mesmo pacote é possível acessar livremente.
+		piece.position = position;
+	}
 	
 	
 }
